@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3307/users
+    username: root
+    password: admin
+#  cloud:
+#    loadbalancer:
+#      ribbon:
+#        enable: false
+#        listOfServers: localhost:8083
+#  ribbon이 아닌 상태에서 listofServers 설정으로는 multiple server 설정이 안 됨.
+# 이 설정 없이도 eureka만 제대로 등록하면 작동한다.
+  jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+#    8080을 오픈 게이트웨이로 사용할 거라서 포트변경.
+  port: 8082
+
+#task-service:
+#  ribbon:
+#    listOfServers: http://localhost:8083/, http://localhost:8085/
+#   이렇게 하면 ribbon에서는 로드밸런싱이 된다고 하는데..
+
+

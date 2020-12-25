@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: task-service
+  datasource:
+    url: jdbc:mysql://localhost:3307/tasks
+    username: root
+    password: admin
+
+  jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8083
+
