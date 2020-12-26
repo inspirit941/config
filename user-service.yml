@@ -5,10 +5,10 @@ spring:
     url: jdbc:mysql://localhost:3307/users
     username: root
     password: admin
-#  cloud:
-#    loadbalancer:
-#      ribbon:
-#        enable: false
+  cloud:
+   loadbalancer:
+     ribbon:
+       enable: true
 #        listOfServers: localhost:8083
 #  ribbon이 아닌 상태에서 listofServers 설정으로는 multiple server 설정이 안 됨.
 # 이 설정 없이도 eureka만 제대로 등록하면 작동한다.
