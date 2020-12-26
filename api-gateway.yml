@@ -1,0 +1,17 @@
+zuul:
+ prefix: /api
+ routes:
+   user-service:
+     path: /user-service/**
+     service-id: user-service
+     # 이전에 생성했던 서비스명 (application.name)
+   task-service:
+     path: /task-service/**
+     service-id: task-service
+
+## /user-service/** url의 경우,
+## service id= user-service를 eureka에서 찾아 연결
+eureka:
+ client:
+   service-url:
+     defaultZone: http://localhost:8761/eureka
