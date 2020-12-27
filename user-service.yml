@@ -44,4 +44,4 @@ server:
 
 
 application:
-  version: v1
+  version: v2
