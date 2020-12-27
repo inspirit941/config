@@ -34,3 +34,5 @@ server:
 #   이렇게 하면 ribbon에서는 로드밸런싱이 된다고 하는데..
 
 
+application:
+  version: v1
